@@ -1,0 +1,196 @@
+.teleprompter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    background-color: #111010;
+    color: white;
+    padding: 0;
+  }
+  
+  .mirrored .teleprompter-text {
+    transform: scaleX(-1);
+  }
+  
+  .script-input {
+    margin-top: 1rem;
+    width: 80%;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    padding: 0.8rem;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background-color: #000000;
+    color: white;
+    resize: vertical;
+  }
+  
+  .teleprompter-text {
+    overflow-y: auto; /* make scrollable */
+    height: 60vh;
+    width: 80%;
+    padding: 2rem;
+    font-size: 2rem;
+    line-height: 1.5;
+    text-align: center;
+    border: 2px solid #555;
+    border-radius: 10px;
+    background-color: #111;
+  }
+  .teleprompter.fullscreen .teleprompter-text {
+    height: calc(100vh - 100px); /* full viewport minus top bar and controls */
+  }
+  
+  .controls {
+    margin-bottom: 70px;
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  button {
+    background-color: #222;
+    color: white;
+    border: 1px solid #555;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  button:hover {
+    background-color: #444;
+  }
+  
+  input[type="range"] {
+    margin-left: 0.5rem;
+  }
+
+
+
+/* pronunciation tooltip underline */
+.tele-phonetic {
+    border-bottom: 1px dotted rgba(255,255,255,0.6);
+    cursor: help;
+  }
+  
+  /* Volume classes */
+  .tele-loud {
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #e53935;
+    /* small pulse so loud looks energetic */
+    animation: tele-pulse 0.9s ease-in-out infinite alternate;
+  }
+  .tele-soft {
+    font-style: italic;
+    opacity: 0.75;
+    color: #cfcfcf;
+  }
+  .tele-strong {
+    font-weight: 800;
+    font-size: 1.05em;
+    color: #ff9800;
+  }
+  .tele-volume { /* fallback */
+    color: inherit;
+  }
+  
+  /* Tone classes */
+  .tele-tone-excited {
+    text-decoration: underline;
+    text-decoration-color: #ff6600; /* orange */
+    text-decoration-thickness: 2px;
+  }
+  .tele-tone-happy {
+    text-decoration: underline;
+    text-decoration-color: #00cc66; /* green */
+    text-decoration-thickness: 2px;
+  }
+  .tele-tone-serious {
+    text-decoration: underline;
+    text-decoration-color: #0033cc; /* blue */
+    text-decoration-thickness: 2px;
+  }
+  .tele-tone-sad {
+    text-decoration: underline;
+    text-decoration-color: #666666; /* gray */
+    text-decoration-thickness: 2px;
+  }
+  .tele-tone-angry {
+    text-decoration: underline;
+    text-decoration-color: #054605; /* red */
+    text-decoration-thickness: 2px;
+  }
+  .tele-tone-calm {
+    text-decoration: underline;
+    text-decoration-color: #ff00c8; /* light blue */
+    text-decoration-thickness: 2px;
+  }
+  
+  
+  /* Pause visual cues */
+  .tele-pause {
+    margin: 0 0.25em;
+    color: rgba(255,255,255,0.6);
+    font-size: 0.95em;
+  }
+  .tele-pause-short::after { content: " •"; opacity: 0.6; }
+  .tele-pause-medium::after { content: " ••"; opacity: 0.6; }
+  .tele-pause-long::after { content: " •••"; opacity: 0.6; }
+  
+  /* Speed visual cues */
+  .tele-speed { font-size: 0.95em; opacity: 0.9; margin: 0 0.15em; }
+  .tele-speed-up::before {
+    content: "↑ ";      /* arrow before the word */
+    color: #ffa500;     /* optional: arrow color */
+  }
+  
+  .tele-speed-down::before {
+    content: "↓ ";      /* arrow before the word */
+    color: #00ffff;     /* optional: arrow color */
+  }
+  
+  
+  /* small animation used by .tele-loud */
+  @keyframes tele-pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.03); }
+  }
+  
+  /* line spacing */
+  .tele-line { margin: 0.2em 0; }
+  
+  /* Make sure text is readable in the teleprompter container */
+  .teleprompter-text { 
+    color: white; 
+    /* keep other styles from your file (width, font-size, etc.) */
+  }
+  .teleprompter-legend-horizontal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    gap: 0.75rem;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    font-size: 0.75rem;
+    z-index: 50;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+  }
+  
+  /* ensure small spacing between legend items */
+  .teleprompter-legend-horizontal span {
+    white-space: nowrap;
+    line-height: 1.4;
+  }
+  

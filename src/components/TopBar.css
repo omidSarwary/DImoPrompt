@@ -1,0 +1,143 @@
+/* Top Bar */
+.topbar {
+    width: 100%;
+    background: linear-gradient(90deg, #5c6bc0, #3f51b5);
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-family: 'Inter', sans-serif;
+    margin-left: 20px;
+  }
+  
+  .logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+  }
+  
+  .logo-highlight {
+    color: #ffcc00; /* accent color for "Prompt" */
+  }
+  
+  .top-bar-buttons button {
+    margin-left: 12px;
+    padding: 6px 14px;
+    font-size: 0.9em;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    background: #ffcc00; /* match accent color */
+    color: #222;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+  }
+  
+  .top-bar-buttons button:hover {
+    background: #e6b800;
+    transform: translateY(-1px);
+  }
+  
+  .top-bar-buttons button:active {
+    transform: translateY(0);
+  }
+  
+  /* Popup Overlay */
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1100;
+  }
+  
+  /* Popup Box */
+  .popup {
+    background: linear-gradient(180deg, #5c6bc0, #3f51b5);
+    padding: 24px 32px;
+    border-radius: 12px;
+    width: 60vw;
+    max-width: 90%;
+    max-height: 80vh;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow-y: scroll;
+  }
+  
+  /* Popup Close Button */
+  .popup button {
+    margin-top: 20px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background: #ffcc00; /* same accent color */
+    color: #222;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+  }
+  
+  .popup button:hover {
+    background: #e6b800;
+    transform: translateY(-1px);
+  }
+  
+  .popup button:active {
+    transform: translateY(0);
+  }
+  
+  /* Optional: Popup headings */
+  .popup h2 {
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffcc00; /* match logo accent color */
+  }
+  .teleprompter-example {
+    font-family: 'Courier New', monospace;
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background: rgba(0,0,0,0.2);
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    overflow-x: auto;
+  }
+  .teleprompter-description {
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .teleprompter-description ul {
+    padding-left: 1.2rem;
+  }
+  
+  .teleprompter-description ul ul {
+    padding-left: 1rem;
+    list-style-type: disc;
+  }
+  
+  .teleprompter-description strong {
+    color: #ffcc00; /* accent color for emphasis */
+  }
+  

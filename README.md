@@ -1,70 +1,191 @@
-# Getting Started with Create React App
+# DimoPrompt 🎤
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+DimoPrompt is a modern, experimental teleprompter web app built with React.  
+It is designed to help users deliver scripts more naturally by providing visual guidance for pronunciation, tone, pacing, and emphasis.
 
-## Available Scripts
+> ⚠️ This is a learning / experimental project ("vibe-coded") and may contain rough edges or incomplete features.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🌐 Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[View App](YOUR_DEPLOYED_URL_HERE)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Screenshots
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- Add screenshots here -->
+<!-- Example:
+![Main UI](./screenshots/main.png)
+![Editor](./screenshots/editor.png)
+-->
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Adjustable scrolling speed for comfortable reading
+- Mirror mode for teleprompter hardware setups
+- Text-to-Speech on hover for pronunciation help
+- Performance-based script formatting system
+- Visual cues for:
+  - Tone (happy, serious, excited, etc.)
+  - Volume (loud, soft, strong)
+  - Stress and emphasis
+  - Speed changes
+  - Pauses
+- Phonetic guidance for difficult words
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Purpose
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+DimoPrompt is built especially for:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Non-native English speakers
+- Content creators (YouTube, presentations)
+- Public speakers and learners
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+It helps users:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Improve pronunciation
+- Control pacing and delivery
+- Add emotion and clarity to speech
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## How It Works
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The app uses a custom **markup-based scripting system** that transforms plain text into a guided teleprompter experience.
 
-### Code Splitting
+Example:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Welcome everyone! Today we will learn how to [stress:take CONTROL] of your [secondary:mindset].
+[pause:short][/pause]
+Remember, practice makes perfect!
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Teleprompter Tag System
 
-### Making a Progressive Web App
+Tags work similarly to HTML and must always be opened and closed properly.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Examples
 
-### Advanced Configuration
+[tone:calm]This is calm[/tone]
+[stress]Important word[/stress]
+[pause:short][/pause]
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Supported Tags
 
-### Deployment
+| Tag                        | Description           |
+| -------------------------- | --------------------- |
+| `[volume:loud][/volume]`   | Bold, energetic voice |
+| `[volume:soft][/volume]`   | Soft, gentle voice    |
+| `[volume:strong][/volume]` | Strong emphasis       |
+| `[tone:excited][/tone]`    | Excited tone 🎉       |
+| `[tone:serious][/tone]`    | Serious tone 💼       |
+| `[tone:happy][/tone]`      | Happy tone 😊         |
+| `[tone:sad][/tone]`        | Sad tone 😔           |
+| `[stress][/stress]`        | Strong emphasis       |
+| `[secondary][/secondary]`  | Softer/secondary text |
+| `[pause:short][/pause]`    | • short pause         |
+| `[pause:long][/pause]`     | •• long pause         |
+| `[speed:up][/speed]`       | Faster delivery       |
+| `[speed:down][/speed]`     | Slower delivery       |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## AI Script Usage (Optional)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This system works especially well with AI-generated scripts.
+
+You can prompt an AI to:
+
+- Add tone, stress, and pacing
+- Format scripts for delivery
+- Highlight pronunciation
+
+Output becomes directly usable inside the teleprompter.
+
+---
+
+## Tech Stack
+
+- React (Create React App)
+- JavaScript
+- Web Speech API (Text-to-Speech)
+
+---
+
+## Getting Started
+
+### Clone the repository:
+
+```bash
+git clone YOUR_REPO_URL_HERE
+
+cd dimoprompt
+```
+
+### Install dependencies:
+
+```bash
+npm install
+```
+
+### Run the app:
+
+```bash
+npm start
+```
+
+Then open:  
+http://localhost:3000
+
+---
+
+## Build
+
+```bash
+npm run build
+```
+
+---
+
+## Limitations
+
+- Not production-hardened
+- Minimal error handling
+- No backend / persistence
+- Experimental UI/UX decisions
+
+---
+
+## Roadmap (Future Ideas)
+
+- Save/load scripts
+- Cloud sync
+- Better mobile experience
+- Custom themes
+- Voice recording + playback
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+## Author
+
+Built as a learning project.
+
+---
+
+## Notes
+
+This project was created as part of experimenting with building real tools using minimal prior coding experience.  
+The goal was to turn an idea into a functional product—not perfection.
